@@ -1,7 +1,4 @@
 package runners;
-
-
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -12,7 +9,7 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber2.json",
                 "junit:target/xml-report/cucumber2.xml" },
         features = "src/test/resources",
-        glue = {"stepDefinitionsUI","hooks"},
+        glue = {"stepDefinitions","hooks"},
         tags = "@zor",
         dryRun = false
 

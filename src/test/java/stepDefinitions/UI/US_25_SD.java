@@ -1,4 +1,4 @@
-package stepDefinitionsUI;
+package stepDefinitions.UI;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -45,8 +45,8 @@ public class US_25_SD {
     }
 
     @And("send buttonuna tiklar.")
-    public void sendButtonunaTiklar() throws InterruptedException {
+    public void sendButtonunaTiklar()  {
         page.send.submit();
-        Thread.sleep(2000);
+
     }
 }
