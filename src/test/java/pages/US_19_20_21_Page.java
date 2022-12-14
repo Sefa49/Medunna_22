@@ -114,11 +114,17 @@ public class US_19_20_21_Page {
     @FindBy(linkText = "User management")
     public WebElement management;
 
-    @FindBy(xpath = "//select[@id='authorities']")
-    public WebElement profil;
+//    @FindBy(xpath = "//select[@id='authorities']")
+//    public WebElement profil;
+//
+//    @FindBy(linkText = "ROLE_PHYSICIAN")
+//    public WebElement role;
 
-    @FindBy(linkText = "ROLE_PHYSICIAN")
-    public WebElement role;
+    @FindBy (xpath = "//*[text()='ROLE_ADMIN']")
+    public WebElement roleAdmin;
+
+    @FindBy (xpath = "//*[text()='ROLE_USER']")
+    public WebElement roleUser;
 
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement saveBtn;

@@ -10,6 +10,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import pages.US_19_20_21_Page;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.util.List;
 
@@ -118,15 +119,13 @@ public class US_19_SD {
 
 
     @When("Admin clicks edit and changes roles from profile.")
-    public void adminClicksEditAndChangesRolesFromProfile() throws InterruptedException {
-        Thread.sleep(2000);
+    public void adminClicksEditAndChangesRolesFromProfile()  {
+
         page.edit.click();
-        Thread.sleep(2000);
-        page.profil.click();
-        Thread.sleep(2000);
-        page.role.click();
-        Thread.sleep(2000);
-        page.saveBtn.click();
+
+//        page.profil.click();
+//        Thread.sleep(2000);
+//        page.role.click();
 
 
     }
@@ -227,5 +226,28 @@ public class US_19_SD {
         page.delete.click();
 
 
+    }
+
+    @Then("Admin  changes roles from profile.")
+    public void adminChangesRolesFromProfile() {
+
+        ReusableMethods.hooverByJS(page.roleUser);
+        waitsSecond(5);
+        Driver.waitAndClick(page.roleUser);
+        waitsSecond(5);
+page.saveBtn.submit();
+waitsSecond(5);
+
+
+    }
+
+    @And("waits {int} second")
+    public void waitsSecond(int second) {
+
+        try {
+            Thread.sleep(second * 1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

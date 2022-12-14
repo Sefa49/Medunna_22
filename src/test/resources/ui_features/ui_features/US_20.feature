@@ -11,7 +11,9 @@
    @US19_20_21
    Scenario: US_20 TC_02  edit existing user roles
      When Admin clicks edit and changes roles from profile.
-
+    And  waits 5 second
+     Then Admin  changes roles from profile.
+     And  waits 5 second
 
      Scenario: US_20 TC_03 delete users
        When Then Admin can deleted users
