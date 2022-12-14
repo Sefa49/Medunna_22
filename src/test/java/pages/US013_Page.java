@@ -27,7 +27,18 @@ public class US013_Page {
     @FindBy(xpath = "//*[@class='btn btn-warning btn-sm']")
     public WebElement inpatient;
 
+    @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
+    public WebElement signIn;
 
+    @FindBy(xpath = "//a[@id='login-item']")
+    public WebElement login;
 
+    @FindBy(xpath = "//*[@name='username']")
+    public WebElement username;
 
+    @FindBy(xpath = "//*[@name='password']")
+    public WebElement password;
+
+    @FindBy(xpath = "//*[@class='btn btn-primary']")
+    public WebElement signInGiris;
 }
